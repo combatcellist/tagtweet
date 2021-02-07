@@ -9,7 +9,7 @@ class TweetsController < ApplicationController
   end
 
   def create
-    @tweet = Tweets.Tag.new(tweet_params)
+    @tweet = TweetsTag.new(tweet_params)
     if @tweet.valid?
       @tweet.save
       return redirect_to root_path
